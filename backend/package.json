@@ -1,0 +1,21 @@
+{
+  "name": "gridsense-backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "simulate:dynamodb": "node scripts/simulate-dynamodb-telemetry.mjs",
+    "simulate:dynamodb:once": "node scripts/simulate-dynamodb-telemetry.mjs --once",
+    "test:wait-time": "node --test tests/wait-time.test.mjs",
+    "simulate:telemetry-api": "node scripts/simulate-telemetry-api.mjs",
+    "simulate:telemetry-api:once": "node scripts/simulate-telemetry-api.mjs --once",
+    "demo:yaba-off": "node scripts/set-yaba-status.mjs OFF",
+    "demo:esp-on": "node scripts/set-esp32-station-status.mjs ON",
+    "demo:esp-off": "node scripts/set-esp32-station-status.mjs OFF",
+    "demo:yaba-on": "node scripts/set-yaba-status.mjs ON"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1063.0",
+    "@aws-sdk/lib-dynamodb": "^3.1063.0"
+  }
+}
